@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Maker | kaiete</title>
+    <link rel="stylesheet" href="https://use.typekit.net/fdg2lzh.css">
+    <script>
+    	function updateCode() {
+    		const header = document.getElementById("header").innerHTML
+    		const article = document.getElementById("article").innerHTML
+    		const code = `<!doctype html>\n<html>\n<head>\n<meta name="viewport" content="width=device-width,initial-scale=1">\n</head>\n<body>\n<h1>` + header + `</h1>` + `\n` + `<p>` + article + `</p>\n</body>\n</html>`
+    		document.getElementById("code").value = code
+    	}
+    </script>
+  </head>
+  <body>
+    <h1>Maker | Make a basic website, without knowing code, for free</h1>
+    <hr class="x-wide">
+    <h2>It's easy! Just tap to edit elements.</h2>
+    <div id="maker">
+    	<h3>Maker editor</h3>
+    	<hr class="wide">
+    	<div id="page">
+    		<h1 id="header" contenteditable oninput="updateCode()">My Maker site header!</h1>
+    		<p id="article" contenteditable oninput="updateCode()">My paragraph</p>
+    	</div>
+    </div>
+    	<hr class="x-wide">
+    	<h3>Copy the html code below, and then follow <a href="/help/index.php">these instructions</a></h3>
+    	<textarea id="code" disabled>
+    	</textarea>
+    <style>
+    	body {
+    		font-family: roboto, sans-serif;
+    		text-align: center;
+    		align-items: center;
+    	}
+    	.small {
+    		width: 15%;
+    	}
+    	.medium {
+    		width: 25%;
+    	}
+    	.wide {
+    		width: 35%;
+    	}
+    	.x-wide {
+    		width: 45%;
+    	}
+    	.widest {
+    		width: 75%;
+    	}
+    	#maker, #page {
+    		outline-color: black;
+    		outline-width: 1px;
+    		outline-style: solid;
+    		align-self: center;
+    		align-items: center;
+    		text-align: center;
+    	}
+    	#code {
+    		outline: darkgray 5px inset;
+    	}
+    </style>
+   </body>
+</html>
